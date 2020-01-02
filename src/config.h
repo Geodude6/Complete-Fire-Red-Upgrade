@@ -137,7 +137,7 @@ enum //These vars need to be one after the other (hence the enum)
 /*===== Metatile Behaviours =====*/
 #define MB_OMNIDIRECTIONAL_JUMP 0x7F //The tile behaviour byte that can be jumped over in all directions
 #define MB_ROCK_CLIMB_WALL 0xA5 //The tile behaviour byte that can be climbed up using Rock Climb
-#define MB_LAVA 0xA6 //The tile beahviour byte that can be lava surfed on. Comment out to remove Lava Surf
+//#define MB_LAVA 0xA6 //The tile beahviour byte that can be lava surfed on. Comment out to remove Lava Surf
 
 #define MAP_PLAYER_HOME ((4 << 8) | 0) //The map bank and map number of the player's home
 
@@ -146,13 +146,13 @@ enum //These vars need to be one after the other (hence the enum)
 
 /*===== Badge Obedience Options =====*/
 #define BASE_OBEDIENCE_LEVEL	10
-#define BADGE_1_OBEDIENCE_LEVEL	10
+#define BADGE_1_OBEDIENCE_LEVEL	20
 #define BADGE_2_OBEDIENCE_LEVEL 30
-#define BADGE_3_OBEDIENCE_LEVEL 30
+#define BADGE_3_OBEDIENCE_LEVEL 40
 #define BADGE_4_OBEDIENCE_LEVEL 50
-#define BADGE_5_OBEDIENCE_LEVEL 50
+#define BADGE_5_OBEDIENCE_LEVEL 60
 #define BADGE_6_OBEDIENCE_LEVEL 70
-#define BADGE_7_OBEDIENCE_LEVEL 70
+#define BADGE_7_OBEDIENCE_LEVEL 80
 
 /*===== OW Palette Options =====*/
 #define TREE_DISGUISE_PAL_ID 0x1105 //The NPC palette id of the tree disguise movement permission.
@@ -236,14 +236,14 @@ enum //These vars need to be one after the other (hence the enum)
 //#define OLD_BURN_DAMAGE //Uncomment this line if you want burn damage to do 1/8 of max health instead of 1/16
 //#define OLD_PARALYSIS_SPD_DROP //Uncomment this line if you want paralysis to lower Spd down to 1/4 instead of 1/2
 //#define OLD_CONFUSION_CHANCE //Uncomment this line if you want the chance that confusion will stop your attack to 50% instead of 33%
-//#define INFINITE_WEATHER //Uncomment this line if you want weather abilities to last for infinite turns
-//#define INFINITE_TERRAIN //Uncomment this line if you want terrain abilities to last for infinite turns
+#define INFINITE_WEATHER //Uncomment this line if you want weather abilities to last for infinite turns
+#define INFINITE_TERRAIN //Uncomment this line if you want terrain abilities to last for infinite turns
 //#define NO_SHEER_COLD_NERF //Uncomment this line to remove all Gen 7 Sheer Cold nerfs
 //#define OLD_MOVE_SPLIT //Uncomment this line to use the Physical/Special split based on move types. Status moves are still set with the split byte.
 
 /*===== Ability Options =====*/
-//#define OLD_GALE_WINGS //Uncomment this line if you want Gale Wings to activate regardless of the user's HP
-//#define OLD_PRANKSTER //Uncomment this line if you want Prankster to be able to affect Dark-Types
+#define OLD_GALE_WINGS //Uncomment this line if you want Gale Wings to activate regardless of the user's HP
+#define OLD_PRANKSTER //Uncomment this line if you want Prankster to be able to affect Dark-Types
 
 /*===== Damage Calculation Options =====*/
 //#define OLD_CRIT_DAMAGE //Uncomment this line if you want Critical hits to do 2x damage, and 3x with Sniper
@@ -261,7 +261,7 @@ enum //These vars need to be one after the other (hence the enum)
 #define GEN_6_POWER_NERFS //Comment out for moves that had powers nerfed in Gen 6 to retain their original base powers.
 #define GEN_7_POWER_NERFS //Comment out for Sucker Punch to retain its original base power.
 #define BUFFED_LEECH_LIFE //Comment out for Leech Life to retain its original base power.
-#define DARK_VOID_ACC_NERF //Comment out for Dark Void to retain its original accuracy.
+//#define DARK_VOID_ACC_NERF //Comment out for Dark Void to retain its original accuracy.
 
 /*===== Capturing Pokemon Options =====*/
 //#define NO_HARDER_WILD_DOUBLES //In Gen 5, Pokemon encountered in double wild battles were harder to catch (based on how many species are owned). Uncomment this line to remove the catch rate decrement.
