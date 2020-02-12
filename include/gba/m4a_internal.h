@@ -407,6 +407,10 @@ extern char gMaxLines[];
 
 #define NUM_MUSIC_PLAYERS ((u16)gNumMusicPlayers)
 #define MAX_LINES ((u32)gMaxLines)
+
+void __attribute__((long_call)) SetPokemonCryStereo(u32 val);
+void __attribute__((long_call)) m4aMPlayPanpotControl(struct MusicPlayerInfo *mplayInfo, u16 trackBits, s8 pan);
+
 /*
 u32 umul3232H32(u32 multiplier, u32 multiplicand);
 void SoundMain(void);
@@ -438,7 +442,6 @@ void m4aSoundVSyncOff(void);
 void m4aMPlayTempoControl(struct MusicPlayerInfo *mplayInfo, u16 tempo);
 void m4aMPlayVolumeControl(struct MusicPlayerInfo *mplayInfo, u16 trackBits, u16 volume);
 void m4aMPlayPitchControl(struct MusicPlayerInfo *mplayInfo, u16 trackBits, s16 pitch);
-void m4aMPlayPanpotControl(struct MusicPlayerInfo *mplayInfo, u16 trackBits, s8 pan);
 void ClearModM(struct MusicPlayerTrack *track);
 void m4aMPlayModDepthSet(struct MusicPlayerInfo *mplayInfo, u16 trackBits, u8 modDepth);
 void m4aMPlayLFOSpeedSet(struct MusicPlayerInfo *mplayInfo, u16 trackBits, u8 lfoSpeed);
@@ -452,7 +455,6 @@ void SetPokemonCryRelease(u8 val);
 void SetPokemonCryProgress(u32 val);
 int IsPokemonCryPlaying(struct MusicPlayerInfo *mplayInfo);
 void SetPokemonCryChorus(s8 val);
-void SetPokemonCryStereo(u32 val);
 void SetPokemonCryPriority(u8 val);
 
 // sound command handler functions

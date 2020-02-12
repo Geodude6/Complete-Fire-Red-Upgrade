@@ -54,6 +54,20 @@ SpecialBuffers = {
     "MIN_LETTER_SPACING": ["FC", "14"],
     "PAUSE_MUSIC": ["FC", "17"],
     "RESUME_MUSIC": ["FC", "18"],
+
+    "A_BUTTON": ["F8", "00"],
+    "B_BUTTON": ["F8", "01"],
+    "L_BUTTON": ["F8", "02"],
+    "R_BUTTON": ["F8", "03"],
+    "START_BUTTON": ["F8", "04"],
+    "SELECT_BUTTON": ["F8", "05"],
+    "DPAD_UP": ["F8", "06"],
+    "DPAD_DOWN": ["F8", "07"],
+    "DPAD_LEFT": ["F8", "08"],
+    "DPAD_RIGHT": ["F8", "09"],
+    "DPAD_UP_DOWN": ["F8", "0A"],
+    "DPAD_LEFT_RIGHT": ["F8", "0B"],
+    "DPAD": ["F8", "0C"],
 }
 
 
@@ -107,7 +121,7 @@ def StringFileConverter(fileName: str):
                     stringToWrite += ProcessString(line, lineNum, maxLength, fillFF)
                     stringToWrite += "0xFF\n\n"  # Only print line in everything went alright
 
-    output = open(fileName.split(".string")[0] + '.s', 'w', encoding="utf-8")  # Only open file once we know everything went okay.
+    output = open(fileName.split(".string")[0] + '.s', 'w')  # Only open file once we know everything went okay.
     output.write(stringToWrite)
     output.close()
 
@@ -201,8 +215,4 @@ def PokeByteTableMaker():
                     except:
                         pass
         dictionary[' '] = 0
-
-    dictionary["�"] = 0xB4
-    dictionary["�"] = 0xB0
-    dictionary["�"] = 0xB1
     return dictionary
